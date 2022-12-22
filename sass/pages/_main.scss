@@ -1,0 +1,140 @@
+@use "../utils/variables" as *;
+
+.container {
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  height: 100%;
+  background-image: url(../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+
+  &__photo {
+    position: relative;
+    background-image: url(../images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    width: calc(100% - 4.8rem);
+    margin: 2.4rem auto;
+
+    &--person {
+      padding: 0 3.3rem 3.3rem 3.3rem;
+      width: 100%;
+
+      &-img {
+        margin-top: 3.3rem;
+        width: 100%;
+        box-shadow: 0px 40px 50px -30px rgba(36, 36, 113, 0.495001);
+      }
+    }
+    &--buttons {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8rem;
+      height: 4rem;
+      background-color: white;
+      border-radius: 200px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    padding: 0.8rem 3.2rem 7.5rem 3.2rem;
+
+    &--author {
+      text-align: center;
+      margin-top: 1.9rem;
+    }
+  }
+}
+
+@media (min-width: 520px) {
+  .container {
+    &__photo {
+      width: calc(100% - 10.8rem);
+      margin: 2.4rem auto;
+
+      &--person {
+        padding: 0 3.3rem 3.3rem 3.3rem;
+
+        &-img {
+          margin-top: 4.3rem;
+        }
+      }
+      &--buttons {
+        position: absolute;
+        width: 9rem;
+        height: 4.3rem;
+      }
+    }
+
+    &__text {
+      padding: 3.8rem 6.2rem 3.5rem 6.2rem;
+
+      &--author {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    background-image: none;
+  }
+}
+
+@media (min-width: 1430px) {
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    max-width: 144rem;
+    max-height: 80rem;
+    padding: 5rem 7.3rem 9.3rem 16.5rem;
+    background-image: url(../images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom -15rem left -15rem;
+    background-size: contain;
+    &__photo {
+      order: 2;
+      background-size: cover;
+      background-position: -7rem center;
+      height: 100%;
+      z-index: 2;
+
+      &--person {
+        padding: 0;
+        height: 54rem;
+        width: 54rem;
+        margin-right: 9.2rem;
+      }
+
+      &--buttons {
+        left: 20%;
+        bottom: 7%;
+        width: 11.2rem;
+        height: 5.6rem;
+      }
+    }
+
+    &__text {
+      padding: 0;
+
+      &--author {
+        display: flex;
+        text-align: left;
+        margin-top: 0;
+      }
+    }
+  }
+}
